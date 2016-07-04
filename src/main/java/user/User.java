@@ -4,19 +4,53 @@
 package user;
 
 public class User {
-    private final long id;
-    private final String name;
+    private long id;
+    private String login;
+    private int groupid;
 
-    public User(long id, String name) {
-        this.id = id;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
         this.name = name;
+    }
+
+    private String name;
+
+    public int getGroupid() {
+        return groupid;
+    }
+
+    public void setGroupid(int groupid) {
+        this.groupid = groupid;
+    }
+
+    public User(long id, String login) {
+        this.id = id;
+        this.login = login;
     }
 
     public long getId() {
         return id;
     }
 
-    public String getContent() {
-        return name;
+    public String getLogin() {
+        return login;
+    }
+
+    //dummy
+    public User(){
+        //dummy
+        this.id = 0;
+        this.login = "";
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
     }
 }
